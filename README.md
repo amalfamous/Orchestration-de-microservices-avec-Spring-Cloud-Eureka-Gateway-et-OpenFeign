@@ -1,4 +1,18 @@
 
+dernier commit:
+<img width="1919" height="938" alt="image" src="https://github.com/user-attachments/assets/9afe93f0-85e4-45af-ad50-5f628e131563" />
+
+<img width="648" height="315" alt="image" src="https://github.com/user-attachments/assets/84f9cdce-6332-4e1c-b656-c570f5878069" />
+<img width="553" height="660" alt="image" src="https://github.com/user-attachments/assets/35cb679b-c7d5-4022-b880-19303cbe6ca7" />
+<img width="499" height="436" alt="image" src="https://github.com/user-attachments/assets/48afb33a-7f94-4295-812e-70aaf2ac6965" />
+
+
+
+
+
+
+1er et 2eme commit pour tp19:
+
 <img width="665" height="835" alt="image" src="https://github.com/user-attachments/assets/ddc4983e-32d8-4659-b014-13431dcda461" />
 
 <img width="681" height="476" alt="image" src="https://github.com/user-attachments/assets/ebc45807-e91b-4c06-8284-9a309417d9f3" />
