@@ -8,20 +8,25 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 
-@EnableDiscoveryClient
+@EnableDiscoveryClient // Active l'enregistrement auprès d'Eureka
 @SpringBootApplication
 public class ClientApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ClientApplication.class, args);
 	}
-
 	@Bean
-	CommandLineRunner initialiserBaseH2(ClientRepository clientRepository) {
+	CommandLineRunner initDatabase(ClientRepository clientRepository) {
 		return args -> {
-			clientRepository.save(new Client(null, "Rabab SELIMANI", 23f));
-			clientRepository.save(new Client(null, "Amal RAMI", 22f));
-			clientRepository.save(new Client(null, "Samir SAFI", 22f));
+			Client client1 = new Client();
+			client1.setNom("Amal Famous");
+			client1.setAge(22.0f);
+			clientRepository.save(client1);
+
+			Client client2 = new Client();
+			client2.setNom("Fatima Zahra");
+			client2.setAge(30.0f);
+			clientRepository.save(client2);
 		};
 	}
 }

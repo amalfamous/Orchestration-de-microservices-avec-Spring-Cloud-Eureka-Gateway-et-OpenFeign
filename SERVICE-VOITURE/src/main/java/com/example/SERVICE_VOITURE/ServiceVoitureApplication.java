@@ -9,6 +9,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import com.example.SERVICE_VOITURE.repositories.VoitureRepository;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
+import org.springframework.web.client.RestTemplate;
+
 @SpringBootApplication
 @EnableFeignClients
 public class ServiceVoitureApplication {
@@ -36,5 +39,20 @@ public class ServiceVoitureApplication {
 			voitureRepository.save(new Voiture(null, "Peugeot", "A 55 4444", "301", 2L, c1));
 		};
 	}
+	/**
+	 * Configure RestTemplate pour la communication inter-services
+	 * @return Instance configurée de RestTemplate
+	 */
+	@Bean
+	public RestTemplate restTemplate() {
+		RestTemplate restTemplate = new RestTemplate();
 
+		// Configuration des timeouts
+		SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
+		requestFactory.setConnectTimeout(5000);  // 5 secondes pour la connexion
+		requestFactory.setReadTimeout(5000);     // 5 secondes pour la lecture
+
+		restTemplate.setRequestFactory(requestFactory);
+		return restTemplate;
+	}
 }
